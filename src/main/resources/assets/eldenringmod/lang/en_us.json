@@ -1,0 +1,9 @@
+{
+  "eldenringmod.configuration.title": "EldenRing Mod Configs",
+  "eldenringmod.configuration.section.eldenringmod.common.toml": "EldenRing Mod Configs",
+  "eldenringmod.configuration.section.eldenringmod.common.toml.title": "EldenRing Mod Configs",
+  "eldenringmod.configuration.items": "Item List",
+  "eldenringmod.configuration.logDirtBlock": "Log Dirt Block",
+  "eldenringmod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "eldenringmod.configuration.magicNumber": "Magic Number"
+}
