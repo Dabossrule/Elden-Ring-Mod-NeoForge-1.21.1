@@ -1,5 +1,7 @@
 package net.daboss.eldenringmod;
 
+import net.daboss.eldenringmod.block.ModBlocks;
+import net.daboss.eldenringmod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -36,8 +38,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class EldenRingMod {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "eldenringmod";
-    // Directly reference a slf4j logger
-    public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "eldenringmod" namespace
     public EldenRingMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
@@ -48,7 +48,9 @@ public class EldenRingMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
@@ -60,6 +62,10 @@ public class EldenRingMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.METEORIC_SHARD);
+            event.accept(ModItems.RAW_METEORIC);
+        }
     }
 
     @SubscribeEvent

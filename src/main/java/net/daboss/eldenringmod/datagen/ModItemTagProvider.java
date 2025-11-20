@@ -1,0 +1,4 @@
+package net.daboss.eldenringmod.datagen;
+
+public class ModItemTagProvider {
+}

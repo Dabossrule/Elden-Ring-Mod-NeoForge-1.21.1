@@ -1,4 +1,8 @@
 {
+  "item.eldenringmod.meteoric_shard": "Meteoric Ore",
+  "item.eldenringmod.raw_meteoric": "Raw Meteoric Ore",
+
+
   "eldenringmod.configuration.title": "EldenRing Mod Configs",
   "eldenringmod.configuration.section.eldenringmod.common.toml": "EldenRing Mod Configs",
   "eldenringmod.configuration.section.eldenringmod.common.toml.title": "EldenRing Mod Configs",
