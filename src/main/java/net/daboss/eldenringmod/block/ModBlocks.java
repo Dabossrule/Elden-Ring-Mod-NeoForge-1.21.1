@@ -23,6 +23,9 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(2, 4),
                     BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final DeferredBlock<Block> BLOOD_BLOCK = registerBlock("blood_block",
+            () -> new Block(BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops()));
+
     public static final DeferredBlock<Block> DEEPSLATE_METEORIC_ORE = registerBlock("deepslate_meteoric_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 5),
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));

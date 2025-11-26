@@ -29,9 +29,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', ModItems.RAW_METEORIC.get())
                 .unlockedBy("has_raw_meteoric", has(ModItems.RAW_METEORIC.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOOD_BLOCK.get())
+                .pattern("BBB")
+                .pattern("BBB")
+                .pattern("BBB")
+                .define('B', ModItems.BLOOD.get())
+                .unlockedBy("has_blood", has(ModItems.BLOOD.get())).save(pRecipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_METEORIC.get(), 1)
                 .requires(ModBlocks.RAW_METEORIC_BLOCK.get())
                 .unlockedBy("has_raw_meteoric_block", has(ModBlocks.RAW_METEORIC_BLOCK.get())).save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLOOD.get(), 9)
+                .requires(ModBlocks.BLOOD_BLOCK.get())
+                .unlockedBy("has_blood_block", has(ModBlocks.BLOOD_BLOCK.get())).save(pRecipeOutput);
 
         //oreSmelting(pRecipeOutput, METEORIC_SMELTABLES, RecipeCategory.MISC, //ModItems.METEORIC_SHARD.get(), 0.25f, 200, "black_opal");
 

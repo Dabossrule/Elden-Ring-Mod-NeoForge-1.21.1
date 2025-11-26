@@ -22,6 +22,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.METEORIC_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_METEORIC_ORE);
         blockWithItem(ModBlocks.RAW_METEORIC_BLOCK);
+        blockWithItem(ModBlocks.BLOOD_BLOCK);
     }
 
     private void blockWithItem(DeferredBlock<Block> deferredBlock) {

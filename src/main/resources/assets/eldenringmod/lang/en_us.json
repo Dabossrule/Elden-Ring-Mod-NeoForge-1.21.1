@@ -1,7 +1,15 @@
 {
   "item.eldenringmod.meteoric_shard": "Meteoric Ore",
   "item.eldenringmod.raw_meteoric": "Raw Meteoric Ore",
+  "item.eldenringmod.blood": "Blood",
 
+  "block.eldenringmod.meteoric_ore": "Meteoric Ore",
+  "block.eldenringmod.Deepslate_meteoric_ore": "Deepslate Meteoric Ore",
+  "block.eldenringmod.raw_meteoric_block": "Block Of Raw Meteoric",
+  "block.eldenringmod.blood_block": "Block Of Blood",
+
+  "creativemodetab.daboss_items_tab": "Elden Ring Mod Items Tab",
+  "creativemodetab.daboss_blocks_tab": "Elden Ring Mod Blocks Tab",
 
   "eldenringmod.configuration.title": "EldenRing Mod Configs",
   "eldenringmod.configuration.section.eldenringmod.common.toml": "EldenRing Mod Configs",

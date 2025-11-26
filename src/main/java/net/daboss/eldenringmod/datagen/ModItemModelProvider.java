@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.METEORIC_SHARD.get());
         basicItem(ModItems.RAW_METEORIC.get());
+        basicItem(ModItems.BLOOD.get());
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

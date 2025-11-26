@@ -19,8 +19,8 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.Set;
 
-public class ModBLockLootTableProvider extends BlockLootSubProvider {
-    protected ModBLockLootTableProvider(HolderLookup.Provider provider) {
+public class ModBlockLootTableProvider extends BlockLootSubProvider {
+    protected ModBlockLootTableProvider(HolderLookup.Provider provider) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), provider);
     }
 
@@ -34,6 +34,10 @@ public class ModBLockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.RAW_METEORIC_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.RAW_METEORIC_BLOCK.get(), ModItems.RAW_METEORIC.get(), 2, 5));
+
+        this.add(ModBlocks.BLOOD_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.BLOOD_BLOCK.get(), ModItems.BLOOD.get(), 1, 3));
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
